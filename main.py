@@ -7,8 +7,8 @@ from client import ExfilClient
 def banner():
     print("==================================================")
     print("    DNS data exfiltrator")
-    print("    Author: ...")
-    print("    Version: 0.1 alpha")
+    print("    Author: 346pa034")
+    print("    Version: 0.1")
     print("==================================================")
 
 
