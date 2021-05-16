@@ -9,7 +9,7 @@ Just clone/download the script from this Git repo
 * PyCryptodome: `pip3 install pycryptodome`
 
 ## Usage
-The script can be run in two modes: host or client. The host mode should be used on your own machine, where the data is being exfiltrated to. The client mode should be run on your target's machine, where the data is being exfiltrated from.
+The script can be run in two modes: host or client. The host mode should be used on your own machine, where the data is being exfiltrated to. The client mode should be run on your target's machine, where the data is being exfiltrated from. The data that is being exfiltrated is encrypted using AES256 symmetric encryption. It is therefore important that you set the same seed phrase or password on both the host and client.
 
 ### Host
 Running the script in host mode will run a mock DNS server on udp/53 (by default, you can change the port if you want to) which is built specifically to receive exfiltrated data from the script in client mode. For example:
