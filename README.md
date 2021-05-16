@@ -1,5 +1,5 @@
 # A lightweight, easy-to-use, DNS data exfiltrator
-As I was plowing through the INE eJPT course, I ran into a DNS data exfiltrator that I thought was annoying to use. So I rolled my own. This is the result. I am open to suggestions, critique and questions. I learned a lot from building this, about the DNS protocol and how data exfiltration works. I hope it'll benefit you in your (legal!) endeavors.
+As I was plowing through the INE eJPT course, I ran into a DNS data exfiltrator that I thought was annoying to use. So I rolled my own. This is the result. I am open to suggestions, critique and questions. I learned a lot from building this, both about the DNS protocol and how data exfiltration works and some neat tricks in Python. I hope it'll benefit you in your (legal!) endeavors.
 
 ## Installation
 Just clone/download the script from this Git repo
