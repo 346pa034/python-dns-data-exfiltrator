@@ -25,5 +25,5 @@ python3 main.py -mode client -dest "your_public_machine_ip" -password "s3cr3tp4s
 
 ### More help
 ```
-python3 dns-exfil.py -h
+python3 main.py -h
 ```
